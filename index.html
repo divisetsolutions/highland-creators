@@ -561,6 +561,81 @@
             font-size: 1rem;
         }
 
+        /* FAQ Section */
+        .faq {
+            padding: 6rem 2rem;
+            background: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-dark);
+        }
+
+        .faq-question svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary-light);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer-content {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1rem;
+        }
+
+        .faq-answer-content strong {
+            color: var(--text-dark);
+        }
+
         /* Footer */
         footer {
             background: var(--text-dark);
@@ -709,6 +784,7 @@
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
@@ -834,6 +910,107 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">Got Questions?</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know before we get started.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        What's the revenue split?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We typically work on a <strong>50/50 revenue share</strong> model, though this can be adjusted based on the project scope and your audience size. You take half, we take half. No hidden fees, no surprise deductions.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        What if my product doesn't sell?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            You have <strong>zero financial risk</strong>. We cover all upfront costs: product development, design, hosting, and marketing materials. If the product doesn't perform, you haven't lost anything. We only succeed when you succeed.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        How long does the process take?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            From our first call to launch is typically <strong>3-4 weeks</strong>. Week 1: Strategy and planning. Weeks 2-3: Product creation and review. Week 4: Launch preparation and go-live. You'll be involved in key decisions but won't be bogged down in execution.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Do I need technical skills or experience selling products?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <strong>Absolutely not.</strong> That's what we handle. You focus on what you do best: creating content and connecting with your audience. We manage all the technical setup, payment processing, customer delivery, and backend systems.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Why should I trust you with my audience?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Your audience is your most valuable asset, and we treat it that way. We only create high-quality products that genuinely help your followers. <strong>You'll review and approve everything before it goes live.</strong> If you're not happy with the product, we don't launch. Simple as that.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        What do I actually have to do?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Your main responsibilities are: <strong>(1)</strong> Help us understand your audience's biggest problems and desires. <strong>(2)</strong> Review and approve the product we create. <strong>(3)</strong> Promote the launch to your audience using the content we provide. Most creators spend <strong>5-10 hours total</strong> across the entire process.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        How do you create the products so quickly?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We use a combination of proven frameworks, smart content tools, and our deep knowledge of the outdoor niche. We're not starting from scratch. We have templates, systems, and strategies that have worked for other creators. We customise everything to your specific audience.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Can I see examples of products you've created?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            We're currently building our portfolio and would love to work with a few select creators to establish case studies. If you're interested in being an early partner, we can show you detailed mockups and our complete launch strategy during your audit call.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -904,6 +1081,7 @@
                 <a href="#benefits">Benefits</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
             <p class="copyright">&copy; 2026 Highland Creators. All rights reserved.</p>
@@ -951,6 +1129,24 @@
 
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
         });
 
         // Form submission
