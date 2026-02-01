@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Highland Creators | Turn Your Outdoor Content Into Profitable Digital Products</title>
-    <meta name="description" content="We partner with adventure creators to launch courses, guides, and digital products. You focus on what you love, we take care of the rest.">
+    <title>Highland Creators | Launch Your High-Ticket Outdoor Mentorship Program</title>
+    <meta name="description" content="We partner with outdoor creators to structure and launch premium mentorship programs. You focus on teaching what you love. We handle everything else.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -561,6 +561,42 @@
             font-size: 1rem;
         }
 
+        /* Why Mentorship Section */
+        .why-mentorship {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .mentorship-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .mentorship-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .mentorship-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .mentorship-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        .mentorship-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
         /* FAQ Section */
         .faq {
             padding: 6rem 2rem;
@@ -799,8 +835,8 @@
     <section class="hero">
         <div class="hero-content">
             <span class="hero-badge">Shadow Operating Business</span>
-            <h1>Turn Your Outdoor Content Into Profitable Digital Products</h1>
-            <p>We partner with adventure creators to launch courses, guides, and digital products. You focus on what you love, we take care of the rest.</p>
+            <h1>Launch Your High-Ticket Outdoor Mentorship Program—And Get Paid $3,000+ Per Client in Weeks, Not Months</h1>
+            <p>We partner with outdoor creators to structure and launch premium mentorship programs. You focus on teaching what you love. We handle everything else—structure, sales pages, payments, marketing. Split revenue 50/50.</p>
             <a href="#contact" class="cta-button">Get Your Free Creator Audit</a>
         </div>
         <div class="scroll-indicator">
@@ -836,7 +872,7 @@
                         <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
                     </div>
                     <h3>We Handle the Tech</h3>
-                    <p>Websites, payment systems, emails, customer questions. All the stuff that keeps you up at night? That's on us.</p>
+                    <p>Websites, payment systems, emails, customer questions, booking systems, payment processing, mentee management. All the stuff that keeps you up at night? That's on us.</p>
                 </div>
                 <div class="benefit-card fade-in">
                     <div class="benefit-icon">
@@ -850,7 +886,7 @@
                         <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
                     </div>
                     <h3>Proven Strategy</h3>
-                    <p>We've launched products before. We've made the mistakes so you don't have to. We know what actually sells and what flops.</p>
+                    <p>We help you launch mentorship first—the highest-revenue product format. Get paid $3,000-$5,000 per mentee. Prove the model. Then we expand to courses using real mentorship insights.</p>
                 </div>
                 <div class="benefit-card fade-in">
                     <div class="benefit-icon">
@@ -875,22 +911,22 @@
                 <div class="step fade-in">
                     <div class="step-number">1</div>
                     <h3>Free Audit Call</h3>
-                    <p>We look at your content, your followers, and figure out what could actually make you money. No sales pitch, just straight talk.</p>
+                    <p>We analyze your audience and expertise. Together we identify the perfect mentorship topic that your followers will pay premium prices for—no guesswork.</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">2</div>
-                    <h3>We Build Your Product</h3>
-                    <p>We design it, build it, and set everything up. You just keep making the content your audience already loves.</p>
+                    <h3>We Structure Your Mentorship</h3>
+                    <p>We build your complete mentorship framework: session structure, curriculum outline, pricing strategy, and delivery format. You review and approve—we handle the details.</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">3</div>
-                    <h3>Launch Together</h3>
-                    <p>We run the launch together. Your audience trusts you, and we know how to turn that trust into sales without being sleazy about it.</p>
+                    <h3>We Build Your Launch System</h3>
+                    <p>Sales page, booking calendar, payment processing, email sequences—everything you need to enroll mentees professionally. Launch-ready in 1-2 weeks.</p>
                 </div>
                 <div class="step fade-in">
                     <div class="step-number">4</div>
-                    <h3>Split the Revenue</h3>
-                    <p>Money comes in, we split it. You get paid while you're out climbing, hiking, or filming your next adventure.</p>
+                    <h3>You Mentor, We Split Revenue</h3>
+                    <p>You show up for mentorship sessions doing what you already do—teaching. We manage logistics, payments, and client experience. Revenue splits 50/50 automatically.</p>
                 </div>
             </div>
         </div>
@@ -903,9 +939,34 @@
             <h2>Built in the Scottish Highlands</h2>
             <p>Highland Creators started because we got tired of watching talented outdoor creators struggle to make a living from their work. We're based in Fort William, Scotland, right at the foot of Ben Nevis. The mountains, lochs, and trails here aren't just a backdrop. They're why we do this.</p>
             <p>We spend our weekends on the same trails and summits you do. We're not suits who discovered "outdoor content" as a market opportunity. We're climbers, hikers, and paddlers who happen to know how to build things that sell.</p>
+            <p>We've seen too many talented outdoor creators struggle to monetize their expertise. They know they should create something, but building courses feels overwhelming. That's why we start with mentorship—the fastest path to real revenue. Launch in weeks, prove demand, then scale.</p>
             <div class="location">
                 <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
                 Fort William, Scotland
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Start With Mentorship Section -->
+    <section class="why-mentorship" id="why-mentorship">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-tag">The Smart Path</span>
+                <h2>Why Start With Mentorship?</h2>
+            </div>
+            <div class="mentorship-grid">
+                <div class="mentorship-card fade-in">
+                    <h3>Highest Revenue Per Person</h3>
+                    <p>One mentee at $3,500 = same revenue as selling 70+ guides at $50. Less volume needed, faster results.</p>
+                </div>
+                <div class="mentorship-card fade-in">
+                    <h3>Launch in Days, Not Months</h3>
+                    <p>No waiting for course videos. No content creation bottleneck. Structure it, launch it, start enrolling mentees immediately.</p>
+                </div>
+                <div class="mentorship-card fade-in">
+                    <h3>Prove First, Scale Later</h3>
+                    <p>Your first mentees validate demand and refine your teaching. Then we build your signature course using real mentorship insights.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -919,6 +980,17 @@
                 <p>Everything you need to know before we get started.</p>
             </div>
             <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <button class="faq-question">
+                        Why mentorship instead of a course?
+                        <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            Mentorship generates <strong>6-10x more revenue per person</strong> and launches in weeks instead of months. You don't wait for videos to be recorded—you start getting paid immediately. After proving the model with mentorship, we build your course using real insights from your mentees. This approach gets you profitable faster.
+                        </div>
+                    </div>
+                </div>
                 <div class="faq-item fade-in">
                     <button class="faq-question">
                         What's the revenue split?
@@ -948,7 +1020,7 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            From our first call to launch is typically <strong>3-4 weeks</strong>. Week 1: Strategy and planning. Weeks 2-3: Product creation and review. Week 4: Launch preparation and go-live. You'll be involved in key decisions but won't be bogged down in execution.
+                            From our first call to launching your mentorship: <strong>1-2 weeks</strong>. Week 1: Structure and strategy. Week 2: Build sales page, booking system, and launch materials. You can start enrolling mentees immediately. Course creation (if you choose to expand later) takes 3-4 weeks.
                         </div>
                     </div>
                 </div>
@@ -981,7 +1053,7 @@
                     </button>
                     <div class="faq-answer">
                         <div class="faq-answer-content">
-                            Your main responsibilities are: <strong>(1)</strong> Help us understand your audience's biggest problems and desires. <strong>(2)</strong> Review and approve the product we create. <strong>(3)</strong> Promote the launch to your audience using the content we provide. Most creators spend <strong>5-10 hours total</strong> across the entire process.
+                            Your main responsibilities are: <strong>(1)</strong> Help us understand your expertise and audience. <strong>(2)</strong> Review and approve the mentorship structure. <strong>(3)</strong> Show up for mentorship sessions with your clients—teaching what you already know. <strong>(4)</strong> Promote the mentorship to your audience using materials we provide. Total time investment: <strong>3-5 hours for setup</strong>, then your scheduled mentorship sessions.
                         </div>
                     </div>
                 </div>
