@@ -18,7 +18,7 @@
   </g>
   <!-- Wordmark -->
   <text x="88" y="38" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#FFFFFF" letter-spacing="0.5">Highland</text>
-  <text x="237" y="38" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="rgba(255,255,255,0.85)" letter-spacing="0.5">Creators</text>
+  <text x="222" y="38" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="rgba(255,255,255,0.85)" letter-spacing="0.5">Creators</text>
   <!-- Subtle tagline -->
   <text x="88" y="58" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="rgba(255,255,255,0.7)" letter-spacing="2">OUTDOOR MENTORSHIP PROGRAMS</text>
 </svg>
