@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D5016"/>
+      <stop offset="100%" style="stop-color:#4A7C8C"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="512" height="512" rx="80" ry="80" fill="url(#bg)"/>
+  <!-- Mountain silhouette at top -->
+  <path d="M120,240 L200,120 L230,160 L256,100 L282,160 L312,120 L392,240 Z" fill="#FFFFFF" opacity="0.3"/>
+  <!-- Snow cap accent -->
+  <path d="M238,130 L256,100 L274,130 L268,124 L256,110 L244,124 Z" fill="#FFFFFF" opacity="0.7"/>
+  <!-- Divider line -->
+  <rect x="160" y="260" width="192" height="3" rx="1.5" fill="#FFFFFF" opacity="0.3"/>
+  <!-- H as path - below mountain -->
+  <path d="M140,290 L140,410 L176,410 L176,362 L228,362 L228,410 L264,410 L264,290 L228,290 L228,336 L176,336 L176,290 Z" fill="#FFFFFF"/>
+  <!-- C as path - below mountain -->
+  <path d="M344,290 C305,290 284,316 284,350 C284,384 305,410 344,410 C366,410 381,400 390,384 L363,368 C357,377 351,382 344,382 C326,382 320,368 320,350 C320,332 326,318 344,318 C351,318 357,323 363,332 L390,316 C381,300 366,290 344,290 Z" fill="#FFFFFF"/>
+</svg>

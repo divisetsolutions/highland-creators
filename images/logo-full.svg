@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" width="400" height="80">
+  <defs>
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D5016"/>
+      <stop offset="100%" style="stop-color:#4A7C8C"/>
+    </linearGradient>
+  </defs>
+  <!-- Mountain silhouette with HC monogram -->
+  <g transform="translate(4, 6)">
+    <!-- Mountain shape - Ben Nevis inspired profile -->
+    <path d="M0,62 L14,28 L22,38 L34,10 L46,38 L54,28 L68,62 Z" fill="url(#mountainGrad)"/>
+    <!-- Snow cap accent -->
+    <path d="M26,22 L34,10 L42,22 L38,20 L34,16 L30,20 Z" fill="#FFFFFF" opacity="0.85"/>
+    <!-- H letter -->
+    <text x="22" y="54" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.5">H</text>
+    <!-- C letter -->
+    <text x="46" y="54" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="-0.5">C</text>
+  </g>
+  <!-- Wordmark -->
+  <text x="88" y="38" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#2D5016" letter-spacing="0.5">Highland</text>
+  <text x="237" y="38" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#4A7C8C" letter-spacing="0.5">Creators</text>
+  <!-- Subtle tagline -->
+  <text x="88" y="58" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="400" fill="#5A6A7A" letter-spacing="2" text-transform="uppercase">OUTDOOR MENTORSHIP PROGRAMS</text>
+</svg>

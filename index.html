@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Highland Creators | Launch Your High-Ticket Outdoor Mentorship Program</title>
     <meta name="description" content="We partner with outdoor creators to structure and launch premium mentorship programs. You focus on teaching what you love. We handle everything else.">
+    <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -62,16 +66,31 @@
         }
 
         .logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: opacity 0.3s ease;
         }
 
-        nav.scrolled .logo {
-            color: var(--primary-dark);
+        .logo:hover {
+            opacity: 0.9;
+        }
+
+        .logo-img {
+            height: 44px;
+            width: auto;
+        }
+
+        .logo-dark {
+            display: none;
+        }
+
+        nav.scrolled .logo-white {
+            display: none;
+        }
+
+        nav.scrolled .logo-dark {
+            display: block;
         }
 
         .nav-links {
@@ -792,6 +811,10 @@
                 color: var(--text-dark);
             }
 
+            .logo-img {
+                height: 36px;
+            }
+
             .mobile-menu-btn {
                 display: block;
             }
@@ -815,7 +838,10 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Highland Creators</a>
+            <a href="#" class="logo">
+                <img src="/images/logo-full-white.svg" alt="Highland Creators" class="logo-img logo-white">
+                <img src="/images/logo-full.svg" alt="Highland Creators" class="logo-img logo-dark">
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#benefits">Benefits</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
@@ -1148,7 +1174,9 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-logo">Highland Creators</div>
+            <div class="footer-logo">
+                <img src="/images/logo-full-white.svg" alt="Highland Creators" style="height: 40px; width: auto;">
+            </div>
             <div class="footer-links">
                 <a href="#benefits">Benefits</a>
                 <a href="#how-it-works">How It Works</a>
