@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome · Highland Creators</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FBFAF6;
+            --bg-alt: #F3F0E9;
+            --text: #23201B;
+            --text-muted: #565047;
+            --stone: #736A5E;
+            --stone-strong: #5C5348;
+            --stone-soft: #D2CCC1;
+            --white: #FFFFFF;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 17px;
+            padding: 3rem 1.5rem 4rem;
+        }
+        .wrap { max-width: 640px; margin: 0 auto; }
+        .logo { text-align: center; margin-bottom: 2.5rem; }
+        .logo img { height: 42px; width: auto; }
+        h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .lead {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 540px;
+            margin: 0 auto 2.5rem;
+        }
+        .steps {
+            background: var(--bg-alt);
+            border-radius: 8px;
+            padding: 1.5rem 1.75rem;
+            margin-bottom: 2.5rem;
+            font-size: 0.97rem;
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .steps strong { display: block; margin-bottom: 0.5rem; font-family: 'Playfair Display', serif; font-size: 1.15rem; }
+        form { display: grid; gap: 1rem; }
+        .form-intro { text-align: center; font-weight: 600; margin-bottom: 0.5rem; }
+        .row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .field label { display: block; font-size: 0.85rem; font-weight: 500; margin-bottom: 0.35rem; color: var(--text); }
+        .field input, .field textarea, .field select {
+            width: 100%;
+            padding: 0.75rem 0.85rem;
+            border-radius: 4px;
+            border: 1px solid var(--stone-soft);
+            background: var(--white);
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.95rem;
+        }
+        .field input:focus, .field textarea:focus, .field select:focus {
+            outline: none;
+            border-color: var(--stone);
+        }
+        button.submit {
+            padding: 0.9rem 1.6rem;
+            border-radius: 4px;
+            border: none;
+            background: var(--stone);
+            color: var(--white);
+            font-family: inherit;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            margin-top: 0.4rem;
+        }
+        button.submit:hover { background: var(--stone-strong); }
+        .form-status { text-align: center; color: var(--stone-strong); font-size: 0.95rem; min-height: 1.3rem; margin-top: 0.5rem; }
+        .foot { text-align: center; font-size: 0.85rem; color: #8a8378; margin-top: 2.5rem; }
+        .foot a { color: var(--stone-strong); }
+        @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="logo"><img src="/images/hc-logo-charcoal.png" alt="Highland Creators"></div>
+
+        <h1>Thank you. Let's begin.</h1>
+        <p class="lead">Your payment is received and your place is reserved. Now we start making your book. Please tell us a little about it below, and we will be in touch within one working day to set up your first call.</p>
+
+        <div class="steps">
+            <strong>What happens next</strong>
+            You fill in the short form below so we understand your book and where you are with it. Within one working day, we email you to introduce ourselves and arrange a first call at a time that suits you. From there, we begin.
+        </div>
+
+        <form id="intakeForm" action="https://formspree.io/f/xlgblynb" method="POST" data-success="Thank you. We have your details and will be in touch within one working day.">
+            <p class="form-intro">Tell us about your book</p>
+            <div class="row">
+                <div class="field">
+                    <label for="firstName">First name</label>
+                    <input type="text" id="firstName" name="first-name" required>
+                </div>
+                <div class="field">
+                    <label for="lastName">Last name</label>
+                    <input type="text" id="lastName" name="last-name" required>
+                </div>
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="field">
+                <label for="package">Which package did you pay for?</label>
+                <select id="package" name="package">
+                    <option value="">Select...</option>
+                    <option>Foothill (£450)</option>
+                    <option>Ridge (£2,750)</option>
+                    <option>Ridge deposit (£750)</option>
+                    <option>Summit (£6,950)</option>
+                    <option>Summit deposit (£1,500)</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="book">Your book: working title and what it is about</label>
+                <textarea id="book" name="book" rows="3" required></textarea>
+            </div>
+            <div class="field">
+                <label for="stage">What stage are you at? (an idea, notes, a rough draft, a finished manuscript)</label>
+                <textarea id="stage" name="stage" rows="2"></textarea>
+            </div>
+            <div class="field">
+                <label for="availability">Best days and times for a first call</label>
+                <input type="text" id="availability" name="availability">
+            </div>
+            <div class="field">
+                <label for="notes">Anything else you would like us to know (optional)</label>
+                <textarea id="notes" name="notes" rows="2"></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="New client intake (paid) — Highland Creators">
+            <button type="submit" class="submit">Send my details</button>
+            <div class="form-status" id="status" role="status" aria-live="polite"></div>
+        </form>
+
+        <p class="foot">Highland Creators · <a href="/">highlandcreators.com</a> · Books published by Diviset Solutions</p>
+    </div>
+
+    <script>
+        const form = document.getElementById('intakeForm');
+        const status = document.getElementById('status');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            status.textContent = 'Sending...';
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (res.ok) {
+                    form.reset();
+                    status.textContent = form.dataset.success;
+                } else {
+                    status.textContent = 'Something went wrong. Please email hello@highlandcreators.com.';
+                }
+            } catch (err) {
+                status.textContent = 'Something went wrong. Please email hello@highlandcreators.com.';
+            }
+        });
+    </script>
+</body>
+</html>
