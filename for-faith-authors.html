@@ -403,15 +403,22 @@
 <section class="magnet">
     <div class="magnet-inner">
         <h2>Free guide: From Pulpit to Page</h2>
-        <p>A short, honest guide for clergy who want to write a book. What to do with a drawer of homilies, how to find the one book inside a lifetime of ministry, and the practical steps to a finished copy. Enter your email and we will send it straight over, with occasional guidance and no spam.</p>
-        <!-- MailerLite (account 2493290, form 192284577884014489). Same list as the site checklist. -->
-        <form class="magnet-form" action="https://assets.mailerlite.com/jsonp/2493290/forms/192284577884014489/subscribe" method="post" id="magnetForm" data-success="Thank you. Please check your inbox to confirm, and the guide will follow.">
+        <p>A short, honest guide for clergy who want to write a book. What to do with a drawer of homilies, how to find the one book inside a lifetime of ministry, and the practical steps to a finished copy. Enter your email for instant access, plus occasional guidance and no spam.</p>
+        <!-- MailerLite (account 2493290, form 192284577884014489). Same list as the site checklist.
+             Delivery is handled on-page: on submit we reveal the guide link immediately,
+             so a faith-author subscriber always gets THIS guide, not the general checklist. -->
+        <form class="magnet-form" action="https://assets.mailerlite.com/jsonp/2493290/forms/192284577884014489/subscribe" method="post" id="magnetForm" data-success="Thank you. Your guide is ready below, and we have added you for occasional guidance.">
             <input type="email" name="fields[email]" placeholder="Your email address" aria-label="Your email address" autocomplete="email" required>
             <input type="hidden" name="ml-submit" value="1">
             <input type="hidden" name="anticsrf" value="true">
-            <button type="submit" class="btn btn-primary">Send me the guide</button>
+            <button type="submit" class="btn btn-primary">Get the guide</button>
         </form>
         <div class="form-status" id="magnetStatus" role="status" aria-live="polite"></div>
+        <div id="magnetDelivery" style="display:none; margin-top:1.6rem; padding:1.6rem; background:var(--white); border:1px solid var(--stone-soft); border-radius:6px;">
+            <p style="margin-bottom:1rem; color:var(--text); font-size:1rem;"><strong>Your guide is ready.</strong> Open it now to read, or use the Save as PDF button on the guide to keep a copy.</p>
+            <a href="/lead-magnet-pulpit-to-page.html" target="_blank" rel="noopener" class="btn btn-primary">Open &ldquo;From Pulpit to Page&rdquo;</a>
+            <p style="margin-top:1rem; color:var(--text-muted); font-size:0.85rem;">Please also confirm the email in your inbox to keep receiving occasional guidance.</p>
+        </div>
     </div>
 </section>
 
@@ -540,6 +547,11 @@
                 await fetch(form.action, { method: 'POST', mode: 'no-cors', body: params });
                 form.reset();
                 status.textContent = form.dataset.success || 'Thank you. Please check your inbox to confirm.';
+                const delivery = document.getElementById('magnetDelivery');
+                if (delivery) {
+                    delivery.style.display = 'block';
+                    delivery.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             } catch (err) {
                 status.textContent = 'Something went wrong. Please try again, or email hello@highlandcreators.com.';
             }
