@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Publishing for Clergy &amp; Faith Authors | Highland Creators</title>
+    <meta name="description" content="A British book studio for priests, ministers, and faith leaders with a book in them. Ghostwriting, editing, cover design, and publishing. No upfront cost option for clergy. Books produced include What Remains and The Deeper Hunger.">
+    <link rel="canonical" href="https://www.highlandcreators.com/for-faith-authors.html">
+    <meta property="og:title" content="Book Publishing for Clergy &amp; Faith Authors | Highland Creators">
+    <meta property="og:description" content="Help for priests, ministers, and faith leaders who want to turn homilies, reflections, or a life of ministry into a published book. A no-upfront-cost route exists for clergy.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.highlandcreators.com/for-faith-authors.html">
+    <link rel="icon" type="image/png" sizes="64x64" href="/images/favicon-64x64.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FBFAF6;
+            --bg-alt: #F3F0E9;
+            --text: #23201B;
+            --text-muted: #565047;
+            --stone: #736A5E;
+            --stone-strong: #5C5348;
+            --stone-soft: #D2CCC1;
+            --warm: #B08C5A;
+            --white: #FFFFFF;
+            --charcoal: #26231E;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 18px;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text);
+        }
+
+        .container { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem; }
+
+        /* NAV */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 1.1rem 1.5rem;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+            background: rgba(250, 250, 247, 0);
+        }
+        nav.scrolled {
+            background: rgba(250, 250, 247, 0.96);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+        }
+        .nav-container { max-width: 1180px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 0.65rem; text-decoration: none; color: var(--text); }
+        .logo-img { height: 34px; width: auto; display: block; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; align-items: center; }
+        .nav-links a { color: var(--text); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.2s ease; }
+        .nav-links a:hover { color: var(--stone-strong); }
+        .nav-cta { background: var(--stone); color: var(--white) !important; padding: 0.6rem 1.15rem; border-radius: 4px; transition: background-color 0.2s ease; }
+        .nav-cta:hover { background: var(--stone-strong); color: var(--white) !important; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: var(--text); margin: 5px 0; transition: all 0.3s ease; }
+
+        /* HERO */
+        .hero { padding: 8rem 1.5rem 4.5rem; background: var(--bg); }
+        .hero-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem; align-items: center; }
+        .hero-eyebrow { display: inline-block; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone-strong); margin-bottom: 1.25rem; }
+        .hero h1 { font-size: clamp(2.3rem, 4.6vw, 3.6rem); line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -0.01em; }
+        .hero-sub { font-size: 1.15rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 2rem; max-width: 560px; }
+        .hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; margin-bottom: 2rem; }
+
+        .btn { display: inline-block; padding: 0.9rem 1.6rem; border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 0.98rem; transition: all 0.2s ease; border: 1px solid transparent; cursor: pointer; }
+        .btn-primary { background: var(--stone); color: var(--white); border-color: var(--stone); }
+        .btn-primary:hover { background: var(--stone-strong); border-color: var(--stone-strong); }
+        .btn-secondary { background: transparent; color: var(--text); border-color: var(--text); }
+        .btn-secondary:hover { background: var(--text); color: var(--white); }
+
+        .hero-trust { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+        .hero-trust span { margin: 0 0.35rem; color: var(--stone-soft); }
+
+        .cover-cluster { position: relative; display: flex; justify-content: center; align-items: center; min-height: 460px; }
+        .cover { position: absolute; box-shadow: 0 20px 50px rgba(26, 31, 38, 0.22), 0 6px 14px rgba(26, 31, 38, 0.10); border-radius: 3px; overflow: hidden; background: var(--white); transition: transform 0.3s ease; }
+        .cover img { display: block; width: 100%; height: 100%; object-fit: cover; }
+        .cover-1 { width: 220px; height: 330px; transform: rotate(-5deg) translate(-70px, 8px); z-index: 2; }
+        .cover-2 { width: 230px; height: 345px; transform: rotate(5deg) translate(70px, 8px); z-index: 1; }
+        .cover:hover { transform: translateY(-6px) scale(1.02); z-index: 4; }
+
+        /* SECTIONS */
+        section { padding: 5.5rem 1.5rem; }
+        section.alt { background: var(--bg-alt); }
+        .section-header { max-width: 740px; margin: 0 auto 3.5rem; text-align: center; }
+        .section-eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--stone-strong); margin-bottom: 0.9rem; }
+        .section-header h2 { font-size: clamp(2rem, 3.5vw, 2.6rem); margin-bottom: 1rem; letter-spacing: -0.01em; }
+        .section-header p { color: var(--text-muted); font-size: 1.05rem; line-height: 1.6; }
+
+        /* WHO / RECOGNISE */
+        .who-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem 3rem; max-width: 900px; margin: 0 auto; }
+        .who-item h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; }
+        .who-item p { color: var(--text-muted); line-height: 1.6; font-size: 1rem; }
+
+        /* NARRATIVE BLOCK */
+        .prose-body { max-width: 720px; margin: 0 auto; }
+        .prose-body p { font-size: 1.08rem; line-height: 1.75; color: var(--text); margin-bottom: 1.4rem; }
+        .prose-body p:last-child { margin-bottom: 0; }
+
+        /* TRACK CARDS */
+        .paths { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.75rem; max-width: 940px; margin: 0 auto; }
+        .path-card { background: var(--white); border: 1px solid var(--stone-soft); border-radius: 6px; padding: 2.25rem 2rem; display: flex; flex-direction: column; }
+        .path-card.featured { border-color: var(--stone-strong); border-width: 2px; }
+        .path-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--stone-strong); margin-bottom: 0.5rem; }
+        .path-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.55rem; margin-bottom: 0.4rem; }
+        .path-price { font-weight: 600; color: var(--stone-strong); margin-bottom: 1rem; font-size: 1.02rem; }
+        .path-card p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; margin-bottom: 1.1rem; }
+        .path-card p:last-of-type { margin-bottom: 1.5rem; }
+        .path-card .btn { margin-top: auto; text-align: center; }
+
+        /* STEPS */
+        .steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+        .step { display: flex; gap: 1.25rem; }
+        .step-num { font-family: 'Playfair Display', Georgia, serif; font-size: 2.25rem; font-weight: 700; color: var(--stone-soft); line-height: 1; flex-shrink: 0; min-width: 3rem; }
+        .step h3 { font-family: 'Inter', system-ui, sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .step p { color: var(--text-muted); font-size: 0.98rem; line-height: 1.6; }
+
+        /* TESTIMONIALS */
+        .testimonials-wrap { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .testimonial { padding: 1.9rem; background: var(--white); border: 1px solid var(--stone-soft); border-radius: 6px; text-align: left; display: flex; flex-direction: column; }
+        .testimonial .quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-style: italic; line-height: 1.5; color: var(--text); margin-bottom: 1.1rem; }
+        .testimonial .attr { font-size: 0.92rem; color: var(--text); font-weight: 600; margin-top: auto; }
+        .testimonial .book { font-size: 0.85rem; color: var(--stone-strong); margin-top: 0.2rem; font-style: italic; }
+
+        /* LEAD MAGNET */
+        .magnet { background: var(--bg-alt); padding: 4.5rem 1.5rem; border-top: 1px solid var(--stone-soft); }
+        .magnet-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+        .magnet h2 { font-size: 1.9rem; margin-bottom: 0.6rem; }
+        .magnet p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1rem; }
+        .magnet-form { display: flex; gap: 0.6rem; max-width: 480px; margin: 0 auto; }
+        .magnet-form input { flex: 1; padding: 0.8rem 1rem; border-radius: 4px; border: 1px solid var(--stone-soft); background: var(--white); color: var(--text); font-family: inherit; font-size: 0.95rem; }
+        .magnet-form input:focus { outline: none; border-color: var(--stone); }
+        .magnet-form button { white-space: nowrap; }
+        .magnet .form-status { color: var(--stone-strong); margin-top: 0.75rem; min-height: 1.2rem; font-size: 0.9rem; }
+
+        /* FAQ */
+        .faq-groups { max-width: 820px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid var(--stone-soft); }
+        .faq-item summary { padding: 1.1rem 0; cursor: pointer; font-weight: 600; color: var(--text); list-style: none; display: flex; justify-content: space-between; align-items: center; font-size: 1rem; }
+        .faq-item summary::-webkit-details-marker { display: none; }
+        .faq-item summary::after { content: "+"; font-size: 1.4rem; color: var(--stone-strong); font-weight: 400; transition: transform 0.2s ease; line-height: 1; }
+        .faq-item[open] summary::after { transform: rotate(45deg); }
+        .faq-item .answer { padding: 0 0 1.25rem; color: var(--text-muted); line-height: 1.65; font-size: 0.98rem; }
+
+        /* FINAL CTA */
+        .final-cta { text-align: center; padding: 6rem 1.5rem; background: var(--charcoal); color: var(--white); }
+        .final-cta h2 { color: var(--white); font-size: clamp(2rem, 3.5vw, 2.5rem); margin-bottom: 1.25rem; }
+        .final-cta p { color: rgba(255, 255, 255, 0.75); max-width: 640px; margin: 0 auto 2rem; line-height: 1.65; }
+        .final-cta .btn-primary { background: var(--white); color: var(--charcoal); border-color: var(--white); }
+        .final-cta .btn-primary:hover { background: var(--stone-soft); border-color: var(--stone-soft); }
+        .final-cta .btn-secondary { border-color: rgba(255, 255, 255, 0.6); color: #fff; }
+        .final-cta .btn-secondary:hover { background: rgba(255, 255, 255, 0.12); color: #fff; border-color: #fff; }
+
+        /* FOOTER */
+        footer { background: var(--charcoal); color: rgba(255, 255, 255, 0.7); padding: 3.5rem 1.5rem 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+        .footer-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+        .footer-brand p { margin-top: 0.75rem; font-size: 0.9rem; line-height: 1.6; max-width: 300px; }
+        .footer-contact { margin-top: 1rem; font-size: 0.9rem; line-height: 1.8; color: rgba(255, 255, 255, 0.7); }
+        .footer-contact a { color: rgba(255, 255, 255, 0.85); text-decoration: none; }
+        .footer-contact a:hover { color: #fff; }
+        .footer-col h5 { font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--white); margin-bottom: 1rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a { color: rgba(255, 255, 255, 0.65); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
+        .footer-col a:hover { color: var(--white); }
+        .footer-bottom { max-width: 1180px; margin: 0 auto; padding-top: 1.75rem; border-top: 1px solid rgba(255, 255, 255, 0.08); font-size: 0.82rem; color: rgba(255, 255, 255, 0.5); text-align: center; line-height: 1.6; }
+
+        /* REVEAL */
+        .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .hero-inner { grid-template-columns: 1fr; text-align: left; }
+            .cover-cluster { margin-top: 3rem; min-height: 380px; }
+            .who-grid, .steps, .paths, .testimonials-wrap { grid-template-columns: 1fr; }
+            .magnet-form { flex-direction: column; }
+            .footer-inner { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 640px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .nav-links.open { display: flex; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; background: var(--white); padding: 1.5rem; gap: 1.25rem; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); }
+            body { font-size: 16px; }
+            section { padding: 4rem 1.5rem; }
+            .hero { padding: 6rem 1.5rem 4rem; }
+            .cover-1 { transform: rotate(-5deg) translate(-52px, 8px); width: 165px; height: 248px; }
+            .cover-2 { transform: rotate(5deg) translate(52px, 8px); width: 170px; height: 255px; }
+            .cover-cluster { min-height: 300px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav id="mainNav">
+    <div class="nav-container">
+        <a href="/" class="logo">
+            <img src="/images/hc-logo-charcoal.png" alt="Highland Creators" class="logo-img">
+        </a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#paths">Two Routes</a></li>
+            <li><a href="#how">How It Works</a></li>
+            <li><a href="/#packages">Packages &amp; Prices</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#start" class="nav-cta">Start a Conversation</a></li>
+        </ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+    <div class="hero-inner">
+        <div>
+            <span class="hero-eyebrow">For Clergy &amp; Faith Leaders</span>
+            <h1>You have spent a lifetime saying it. Now let us help you write it.</h1>
+            <p class="hero-sub">A British book studio for priests, ministers, and faith leaders with a book in them. We turn homilies, reflections, and a life of ministry into a book worth keeping. And for those who cannot pay upfront, there is a way to publish with no cost until the book sells.</p>
+            <div class="hero-ctas">
+                <a href="#start" class="btn btn-primary">Start a Conversation</a>
+                <a href="#paths" class="btn btn-secondary">See How It Works</a>
+            </div>
+            <p class="hero-trust">UK-based, Scottish Highlands <span>&middot;</span> Clergy already published <span>&middot;</span> No-upfront-cost route available <span>&middot;</span> You keep the rights</p>
+        </div>
+        <div class="cover-cluster">
+            <div class="cover cover-1"><img src="/images/what-remains-cover.jpg" alt="Cover of What Remains by Fr Charles Egbon"></div>
+            <div class="cover cover-2"><img src="/images/deeper-hunger-cover.jpg" alt="Cover of The Deeper Hunger by Fr Mark Odion"></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ THE BOOK YOU HAVE BEEN CARRYING ============ -->
+<section id="carrying">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">The Book You Have Been Carrying</span>
+            <h2>Most faith leaders have a book in them. Few ever get it out.</h2>
+        </div>
+        <div class="prose-body">
+            <p>You have preached the same truths for years, watched them land in people's lives, and thought more than once that they belonged in a book. Perhaps you have a drawer of homilies. Perhaps a season of your ministry that shaped you, in a parish, a mission, a hospital ward, or a prison. Perhaps only a conviction that your years of walking with people have taught you something worth setting down.</p>
+            <p>The gap is rarely the message. It is the practical business of turning what you carry into a finished book: the writing, the editing, the cover, the setup, and the quiet fear that publishing is either vanity or a maze. We built this studio to close that gap, and to do it in a way that respects both your voice and your calling.</p>
+            <p>We already produce books for clergy. <em>What Remains</em> by Fr Charles Egbon and <em>The Deeper Hunger</em> by Fr Mark Odion were both made here, from first idea to printed copy. We understand the register, the reverence, and the reader.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ============ WHO THIS IS FOR ============ -->
+<section id="who" class="alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Who We Help</span>
+            <h2>If any of these is you, there is a book here.</h2>
+        </div>
+        <div class="who-grid">
+            <div class="who-item">
+                <h3>The priest with a drawer of homilies</h3>
+                <p>Years of preaching sit in notebooks and folders. Shaped and edited, they become a book of reflections that reaches far past the pews you preached to.</p>
+            </div>
+            <div class="who-item">
+                <h3>The minister with a story of ministry</h3>
+                <p>A mission abroad, a hard parish, a hospital or prison chaplaincy. The story only you can tell, made into a memoir that will outlast you.</p>
+            </div>
+            <div class="who-item">
+                <h3>The retiring or jubilee priest</h3>
+                <p>An ordination anniversary or a jubilee is the natural moment to gather a life's ministry into print. We can have it ready for the date that matters.</p>
+            </div>
+            <div class="who-item">
+                <h3>The teacher of the faith</h3>
+                <p>A book on prayer, discipleship, grief, or the spiritual life, written to help ordinary people. We help you make it clear, warm, and genuinely useful.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ TWO ROUTES ============ -->
+<section id="paths">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Two Routes to a Published Book</span>
+            <h2>Including one built for clergy who cannot pay upfront.</h2>
+            <p>Many priests and ministers have a book worth making but no budget to fund it. We did not want that to be the end of the conversation. So there are two honest ways to work with us.</p>
+        </div>
+        <div class="paths">
+            <div class="path-card">
+                <div class="path-eyebrow">Route One</div>
+                <h3>Full Service</h3>
+                <div class="path-price">Fixed-price packages from &pound;450</div>
+                <p>You fund the production directly and own the book completely. You keep 100% of everything it earns, forever. Three packages, from publishing a finished manuscript to writing the whole book with you.</p>
+                <p>Best if you have the means and want clean ownership from day one.</p>
+                <a href="/#packages" class="btn btn-secondary">See Packages &amp; Prices</a>
+            </div>
+            <div class="path-card featured">
+                <div class="path-eyebrow">Route Two &middot; For Clergy Who Need It</div>
+                <h3>Partnership</h3>
+                <div class="path-price">No upfront cost</div>
+                <p>We produce your book at no charge to you. Once it is published and selling, we share the revenue until the production cost is covered, and then the balance flips firmly in your favour for the life of the book.</p>
+                <p>Built for the priest or minister whose book is genuinely worth making but whose means are limited. Your calling should not be priced out.</p>
+                <a href="#start" class="btn btn-primary">Ask About Partnership</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section id="how" class="alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">How It Works</span>
+            <h2>From a first conversation to a book in your hands.</h2>
+            <p>We can start from a finished manuscript, a folder of homilies, or nothing but an idea and your voice.</p>
+        </div>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">01</div>
+                <div>
+                    <h3>We listen</h3>
+                    <p>A gentle conversation about your ministry, your reader, and the book you carry. No pressure, no pitch. We tell you honestly whether there is a book here and which route fits.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">02</div>
+                <div>
+                    <h3>We shape it</h3>
+                    <p>From interviews, your homilies, or a draft, we build an outline and then the chapters, in your voice. You review every stage. Editors improve writing; they never replace the person behind it.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">03</div>
+                <div>
+                    <h3>We make it beautiful</h3>
+                    <p>A cover designed with reverence and care, interior formatting for paperback and ebook, and every small decision a properly published book needs. Made to sit well in a reader's hands.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">04</div>
+                <div>
+                    <h3>We publish it</h3>
+                    <p>ISBN, setup, and a launch. Direct sales through our own storefront, Amazon if you want it, or your own imprint. The book stays in print, and you keep the rights to everything it becomes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PRAISE ============ -->
+<section id="praise">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Praise for Books We Have Made</span>
+            <h2>Two books by clergy, already in readers' hands.</h2>
+            <p>Advance praise for the first faith titles produced in our studio.</p>
+        </div>
+        <div class="testimonials-wrap">
+            <div class="testimonial">
+                <div class="quote">"This series of beautiful, poignant reflections observes the quiet persistence of people of faith living in a culture that has left faith behind."</div>
+                <div class="attr">Dr Peter Langhorne, University of Glasgow</div>
+                <div class="book">on What Remains, by Fr Charles Egbon</div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"I would recommend this book to anybody, at any stage in their journey of faith."</div>
+                <div class="attr">Philip Booth, Professor, St Mary's University, Twickenham</div>
+                <div class="book">on The Deeper Hunger, by Fr Mark Odion</div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"A searingly honest portrayal of faith in the West Highlands of Scotland. I felt stronger for having read it."</div>
+                <div class="attr">Irving Nixon, Mingarry Parish, Scottish Highlands</div>
+                <div class="book">on What Remains</div>
+            </div>
+            <div class="testimonial">
+                <div class="quote">"An insightful, compassionate, and quietly challenging work that invites readers to reconsider where and how they look for God."</div>
+                <div class="attr">Dr Richard Byrne, Harper Adams University</div>
+                <div class="book">on The Deeper Hunger</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ LEAD MAGNET ============ -->
+<section class="magnet">
+    <div class="magnet-inner">
+        <h2>Free guide: From Pulpit to Page</h2>
+        <p>A short, honest guide for clergy who want to write a book. What to do with a drawer of homilies, how to find the one book inside a lifetime of ministry, and the practical steps to a finished copy. Enter your email and we will send it straight over, with occasional guidance and no spam.</p>
+        <!-- MailerLite (account 2493290, form 192284577884014489). Same list as the site checklist. -->
+        <form class="magnet-form" action="https://assets.mailerlite.com/jsonp/2493290/forms/192284577884014489/subscribe" method="post" id="magnetForm" data-success="Thank you. Please check your inbox to confirm, and the guide will follow.">
+            <input type="email" name="fields[email]" placeholder="Your email address" aria-label="Your email address" autocomplete="email" required>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+            <button type="submit" class="btn btn-primary">Send me the guide</button>
+        </form>
+        <div class="form-status" id="magnetStatus" role="status" aria-live="polite"></div>
+    </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="alt">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-eyebrow">Questions Clergy Ask</span>
+            <h2>Honest answers, before you commit to anything.</h2>
+            <p>Click any question to expand.</p>
+        </div>
+        <div class="faq-groups">
+            <details class="faq-item"><summary>I have a drawer full of homilies. Can that become a book?</summary><div class="answer">Often, yes. Homilies rarely become a book by being stacked together, but they are a rich seam. We read what you have, find the threads that hold, and shape them into reflections that read as a book rather than a collection of talks. Many faith books begin exactly this way.</div></details>
+            <details class="faq-item"><summary>Is self-publishing a book vanity? I do not want it to look like that.</summary><div class="answer">A well-made book that helps its readers is not vanity, whoever pays for it. What reads as vanity is a book made carelessly. Our whole craft is aimed at the opposite: a book with a real reader in mind, made to a professional standard, that you would be glad to hand to your bishop or your parish.</div></details>
+            <details class="faq-item"><summary>I cannot justify a large upfront cost. Is there another way?</summary><div class="answer">Yes. This is exactly why the Partnership route exists. We produce the book at no upfront charge, and once it is selling we share revenue until the production cost is recouped, after which the balance flips firmly in your favour. Your book gets made without a bill you cannot meet.</div></details>
+            <details class="faq-item"><summary>Will the book still sound like me?</summary><div class="answer">That is the point. We work from your own words, your homilies, and interviews in your voice, and you review every stage. If ghostwriting is involved, we start with sample chapters so you can hear the voice before we write the whole book. We protect your voice, including from our own editing.</div></details>
+            <details class="faq-item"><summary>Do I keep the rights and the royalties?</summary><div class="answer">On the Full Service route you own everything and keep 100% of what the book earns. On Partnership, the revenue share flips firmly in your favour once production is recouped, and the copyright in your words is always yours. We never ask you to sign away your work.</div></details>
+            <details class="faq-item"><summary>Can it be ready for a jubilee or ordination anniversary?</summary><div class="answer">Yes, and it is one of the most natural reasons to make a book. Tell us the date early and we build the schedule backwards from it. We produced The Deeper Hunger for Fr Mark Odion's Silver Jubilee, so we know how to hold a hard deadline.</div></details>
+            <details class="faq-item"><summary>Do you work with clergy of other traditions, not only Catholic?</summary><div class="answer">Yes. We have produced Catholic titles, and we work with ministers and leaders across the Christian traditions. Our craft is the book; your tradition and voice are yours. We handle each with care and without imposing a house line.</div></details>
+            <details class="faq-item"><summary>Do you sign a confidentiality agreement?</summary><div class="answer">Gladly. If your book touches sensitive pastoral ground, or you would simply prefer discretion, we sign a non-disclosure agreement before any work begins.</div></details>
+            <details class="faq-item"><summary>What is the first step, and does it cost anything?</summary><div class="answer">A conversation, and no, it costs nothing. About thirty minutes by phone or video, or in writing by email if you prefer. We ask about your book and your situation and tell you honestly what would fit, including whether a book is right for you at all.</div></details>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section id="start" class="final-cta">
+    <div class="container">
+        <h2>Start with a conversation, not a commitment.</h2>
+        <p>Tell us a little about the book you carry and where you are on the journey. We will reply within one working day, tell you honestly which route fits, and take it at your pace. If you would rather write than talk, that is welcome too.</p>
+        <div class="hero-ctas" style="justify-content:center; margin-bottom:2rem;">
+            <a href="/#cta" class="btn btn-primary">Start a Conversation</a>
+            <a href="mailto:hello@highlandcreators.com?subject=Enquiry%20from%20a%20faith%20author" class="btn btn-secondary">Email Us Directly</a>
+        </div>
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.6);">Or write to hello@highlandcreators.com &middot; +44 7495 861388</p>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div>
+                <img src="/images/hc-logo-white.png" alt="Highland Creators" style="height:36px;width:auto;display:block;">
+            </div>
+            <p>Britain's boutique book studio. Books produced here are published by our sister imprint <a href="https://divisetsolutions.com" style="color:#FAFAF7;text-decoration:underline;">Diviset Solutions</a>.</p>
+            <p class="footer-contact">
+                Lochyside, Fort William, United Kingdom<br>
+                <a href="tel:+447495861388">+44 7495 861388</a><br>
+                <a href="mailto:hello@highlandcreators.com">hello@highlandcreators.com</a>
+            </p>
+        </div>
+        <div class="footer-col">
+            <h5>For Authors</h5>
+            <ul>
+                <li><a href="/for-faith-authors.html">Clergy &amp; Faith Authors</a></li>
+                <li><a href="/#packages">Packages &amp; Prices</a></li>
+                <li><a href="/#services">Individual Services</a></li>
+                <li><a href="/#how">How It Works</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#promise">The Highland Promise</a></li>
+                <li><a href="/#faq">FAQ</a></li>
+                <li><a href="#start">Get Started</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>Bookshop</h5>
+            <ul>
+                <li><a href="https://divisetsolutions.com" target="_blank" rel="noopener">Diviset catalogue</a></li>
+                <li><a href="https://divisetsolutions.com" target="_blank" rel="noopener">Buy direct</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; <span id="year">2026</span> Highland Creators. Based at the foot of Ben Nevis, Scottish Highlands.
+    </div>
+</footer>
+
+<script>
+    // Nav scroll shadow
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) { nav.classList.add('scrolled'); }
+        else { nav.classList.remove('scrolled'); }
+    });
+
+    // Mobile menu
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    if (menuBtn) { menuBtn.addEventListener('click', () => navLinks.classList.toggle('open')); }
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal on scroll
+    const revealEls = document.querySelectorAll('.section-header, .who-item, .path-card, .step, .testimonial');
+    revealEls.forEach(el => el.classList.add('reveal'));
+    if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+            });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => io.observe(el));
+    } else {
+        revealEls.forEach(el => el.classList.add('visible'));
+    }
+
+    // Lead magnet (MailerLite): no-cors POST, optimistic success. Double opt-in confirms by email.
+    function wireMailerLite(formId, statusId) {
+        const form = document.getElementById(formId);
+        const status = document.getElementById(statusId);
+        if (!form) return;
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            status.textContent = 'Sending...';
+            const fd = new FormData(form);
+            const params = new URLSearchParams();
+            for (const [k, v] of fd.entries()) params.append(k, v);
+            try {
+                await fetch(form.action, { method: 'POST', mode: 'no-cors', body: params });
+                form.reset();
+                status.textContent = form.dataset.success || 'Thank you. Please check your inbox to confirm.';
+            } catch (err) {
+                status.textContent = 'Something went wrong. Please try again, or email hello@highlandcreators.com.';
+            }
+        });
+    }
+    wireMailerLite('magnetForm', 'magnetStatus');
+</script>
+
+</body>
+</html>
