@@ -289,6 +289,32 @@
             transform: translateY(-6px) scale(1.02);
             z-index: 4;
         }
+        .cover a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .cover a::after {
+            content: "Buy the book";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(35, 32, 27, 0.88);
+            color: #fff;
+            font-family: 'Inter', system-ui, sans-serif;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            text-align: center;
+            padding: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .cover a:hover::after {
+            opacity: 1;
+        }
 
         /* ============ SECTION BASE ============ */
         section {
@@ -1190,8 +1216,8 @@
             <p class="hero-trust">UK-based <span>·</span> Openly priced <span>·</span> Fixed-price packages from &pound;450 <span>·</span> Amazon-live or direct sales, your choice</p>
         </div>
         <div class="cover-cluster">
-            <div class="cover cover-1"><img src="/images/what-remains-cover.jpg" alt="Cover of What Remains by Fr Charles Egbon"></div>
-            <div class="cover cover-2"><img src="/images/deeper-hunger-cover.jpg" alt="Cover of The Deeper Hunger by Fr Mark Odion"></div>
+            <div class="cover cover-1"><a href="https://payhip.com/b/DLxbZ" target="_blank" rel="noopener"><img src="/images/what-remains-cover.jpg" alt="Buy What Remains by Fr Charles Egbon"></a></div>
+            <div class="cover cover-2"><a href="https://payhip.com/b/KcZs1" target="_blank" rel="noopener"><img src="/images/deeper-hunger-cover.jpg" alt="Buy The Deeper Hunger by Fr Mark Odion"></a></div>
             <div class="cover cover-3"><img src="/images/stop-waking-3am-cover.jpg" alt="Cover of Stop Waking at 3AM by Charlie Dondous"></div>
         </div>
     </div>
