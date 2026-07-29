@@ -98,6 +98,9 @@
         .cover-1 { width: 220px; height: 330px; transform: rotate(-5deg) translate(-70px, 8px); z-index: 2; }
         .cover-2 { width: 230px; height: 345px; transform: rotate(5deg) translate(70px, 8px); z-index: 1; }
         .cover:hover { transform: translateY(-6px) scale(1.02); z-index: 4; }
+        .cover a { display: block; width: 100%; height: 100%; position: relative; }
+        .cover a::after { content: "Buy the book"; position: absolute; left: 0; right: 0; bottom: 0; background: rgba(35,32,27,0.88); color: #fff; font-family: 'Inter', system-ui, sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.03em; text-align: center; padding: 0.5rem; opacity: 0; transition: opacity 0.2s ease; }
+        .cover a:hover::after { opacity: 1; }
 
         /* SECTIONS */
         section { padding: 5.5rem 1.5rem; }
@@ -141,6 +144,8 @@
         .testimonial .quote { font-family: 'Playfair Display', Georgia, serif; font-size: 1.2rem; font-style: italic; line-height: 1.5; color: var(--text); margin-bottom: 1.1rem; }
         .testimonial .attr { font-size: 0.92rem; color: var(--text); font-weight: 600; margin-top: auto; }
         .testimonial .book { font-size: 0.85rem; color: var(--stone-strong); margin-top: 0.2rem; font-style: italic; }
+        .testimonial .book a { color: var(--stone-strong); text-decoration: underline; text-underline-offset: 2px; }
+        .testimonial .book a:hover { color: var(--text); }
 
         /* LEAD MAGNET */
         .magnet { background: var(--bg-alt); padding: 4.5rem 1.5rem; border-top: 1px solid var(--stone-soft); }
@@ -247,8 +252,8 @@
             <p class="hero-trust">UK-based, Scottish Highlands <span>&middot;</span> Clergy already published <span>&middot;</span> No-upfront-cost route available <span>&middot;</span> You keep the rights</p>
         </div>
         <div class="cover-cluster">
-            <div class="cover cover-1"><img src="/images/what-remains-cover.jpg" alt="Cover of What Remains by Fr Charles Egbon"></div>
-            <div class="cover cover-2"><img src="/images/deeper-hunger-cover.jpg" alt="Cover of The Deeper Hunger by Fr Mark Odion"></div>
+            <div class="cover cover-1"><a href="https://payhip.com/b/DLxbZ" target="_blank" rel="noopener"><img src="/images/what-remains-cover.jpg" alt="Buy What Remains by Fr Charles Egbon"></a></div>
+            <div class="cover cover-2"><a href="https://payhip.com/b/KcZs1" target="_blank" rel="noopener"><img src="/images/deeper-hunger-cover.jpg" alt="Buy The Deeper Hunger by Fr Mark Odion"></a></div>
         </div>
     </div>
 </section>
@@ -378,22 +383,22 @@
             <div class="testimonial">
                 <div class="quote">"This series of beautiful, poignant reflections observes the quiet persistence of people of faith living in a culture that has left faith behind."</div>
                 <div class="attr">Dr Peter Langhorne, University of Glasgow</div>
-                <div class="book">on What Remains, by Fr Charles Egbon</div>
+                <div class="book">on <a href="https://payhip.com/b/DLxbZ" target="_blank" rel="noopener">What Remains</a>, by Fr Charles Egbon</div>
             </div>
             <div class="testimonial">
                 <div class="quote">"I would recommend this book to anybody, at any stage in their journey of faith."</div>
                 <div class="attr">Philip Booth, Professor, St Mary's University, Twickenham</div>
-                <div class="book">on The Deeper Hunger, by Fr Mark Odion</div>
+                <div class="book">on <a href="https://payhip.com/b/KcZs1" target="_blank" rel="noopener">The Deeper Hunger</a>, by Fr Mark Odion</div>
             </div>
             <div class="testimonial">
                 <div class="quote">"A searingly honest portrayal of faith in the West Highlands of Scotland. I felt stronger for having read it."</div>
                 <div class="attr">Irving Nixon, Mingarry Parish, Scottish Highlands</div>
-                <div class="book">on What Remains</div>
+                <div class="book">on <a href="https://payhip.com/b/DLxbZ" target="_blank" rel="noopener">What Remains</a></div>
             </div>
             <div class="testimonial">
                 <div class="quote">"An insightful, compassionate, and quietly challenging work that invites readers to reconsider where and how they look for God."</div>
                 <div class="attr">Dr Richard Byrne, Harper Adams University</div>
-                <div class="book">on The Deeper Hunger</div>
+                <div class="book">on <a href="https://payhip.com/b/KcZs1" target="_blank" rel="noopener">The Deeper Hunger</a></div>
             </div>
         </div>
     </div>
